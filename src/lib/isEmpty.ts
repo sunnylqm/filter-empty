@@ -4,6 +4,7 @@ function isEmpty(value?: any): boolean {
   if (value === null) return true;
   if (value === undefined) return true;
   if (value === '') return true;
+  if (value instanceof Date) return false;
   if (typeof value === 'boolean') return false;
   if (typeof value === 'number') return false;
   if (Array.isArray(value) && !value.length) return true;
